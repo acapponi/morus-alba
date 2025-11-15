@@ -1,0 +1,72 @@
+.navbar {
+    min-height: 85px;
+    background-color: var(--color-secondary);
+    padding-top: 0;
+    padding-bottom: 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: box-shadow .2s ease, background .2s ease;
+
+    &.is-sticky {
+        box-shadow: -3px 0px 12px #2b2b2b4a;
+    }
+
+    .navbar-brand {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        img {
+            margin: 7.5px 0px;
+            display: block;
+            width: auto;
+            height: auto;
+            max-height: 55px;
+
+            @include media-breakpoint-up(ssm) {
+                max-width: 175px;
+            }
+
+            @include media-breakpoint-up(sm) {
+                margin: 15px 0px;
+                max-height: 55px;
+                max-width: 250px;
+            }
+        }
+    }
+
+    .navbar-nav {
+        .nav-link {
+            color: var(--color-black);
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: 30px;
+            font-weight: bold;
+            padding: 0px 10px;
+            position: relative;
+            display: inline-block;
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: var(--bs-navbar-nav-link-padding-x);
+            margin-right: var(--bs-navbar-nav-link-padding-x);;
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0%;
+                height: 2px;
+                background: var(--color-primary);
+                transition: width .25s ease;
+            }
+
+            &:hover {
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

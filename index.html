@@ -19,13 +19,35 @@
     <link rel="manifest" href="site.webmanifest" />
 
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="icomoon/style.css">
 </head>
 
 <body>
     <main>
 
-        <section class="hero">
+        <nav class="navbar navbar-expand">
             <div class="container-xl">
+                <a class="navbar-brand" href="#"><img src="img/logo-full.svg" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://tienda.morusalba.com.ar" target="_blank">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://wa.me/5491164813869?text=Hola!%20Quiero%20consultar%20por%20las%20clases" target="_blank">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <!-- <div class="container-xl">
                 <div class="row align-items-center h-100">
                     <div class="col-12">
 
@@ -39,87 +61,189 @@
                             </p>
         
                             <div>
-                                <a href="https://wa.me/5491164813869?text=Hola!%20Quiero%20saber%20m%C3%A1s%20sobre%20Morus%20Alba"
+                                <a href="https://wa.me/5491164813869?text=Hola!%20Quiero%20consultar%20por%20las%20clases"
                                     target="_blank" class="btn btn-primary">Escribime!</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            <picture>
+                <source media="(max-width:640px)" srcset="img/web-mobile.png">
+                <img src="img/web.png" alt="Morus Alba">
+            </picture>
         </section>
 
         <section class="aboutme">
             <div class="container-xl">
-                <div class="row align-items-center g-5 gx-md-7">
-                    
-                    <div class="col-sm-6 order-sm-2">
+                <div class="row align-items-center gx-mdx-7 gy-5">
+
+                    <div class="col-md-6 order-md-2">
                         <div class="aboutme--content">
-                            <p class="h3">Soy Agostina Capponi, educadora canina y creadora de Morus Alba.</p>
+                            <p class="h3 lh-base">Soy Agos Capponi, educadora canina y una apasionada de los perros.</p>
 
-                            <p class="h3">Trabajo desde el respeto y la empatía, ayudando a las personas a entender a sus perros, fortalecer el vínculo y
-                            disfrutar de una convivencia más armoniosa.</p>
+                            <p class="h3 lh-base">Trabajo desde el respeto y la empatía, ayudando a las personas a entender a
+                                sus perros, fortalecer el vínculo y
+                                disfrutar de una convivencia más armoniosa.</p>
 
                         </div>
                     </div>
-                    <div class="col-sm-6 order-sm-1">
-                        <img src="img/upscalemedia-transformed.jpeg" class="img-fluid" alt="About me">
+                    <div class="col-md-6 order-md-1">
+                        <img src="img/upscalemedia-transformed.jpeg" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="formacion">
+        <section class="formacion pt-md-7">
             <div class="container-xl">
-                <div class="row align-items-center g-5 gx-md-7">
-                    
-                    <div class="col-sm-6">
-                        <div class="formacion--content">
-                            <h2 class="mb-4">Mi enfoque y formación</h2>
-                            <p>Creo en una educación amable, sin castigos, y en el bienestar integral: físico, mental y emocional.</p>
-                            
-                            <p>Me formé como educadora canina especializada en refuerzo positivo, con capacitaciones en comportamiento, lenguaje canino
-                            y bienestar animal.</p>
-                            
-                            <p>Sigo actualizándome constantemente para ofrecer acompañamientos personalizados que se adapten a cada perro y familia.</p>
+                <div class="row">
 
-                            <button class="btn btn-link"  data-bs-toggle="modal" data-bs-target="#formacion">Conocé más sobre mi formación ›</button>
+                    <div class="col-mdx-4">
+                        <div class="formacion--content">
+                            <h2 class="mb-4">Enfoque & formación</h2>
+
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <img src="img/IMG_20251018_112104510_HDR.webp" class="img-fluid" alt="Sultán">
+                    <div class="col-mdx-8">
+                        <p>Creo en una educación amable, sin castigos, y en el bienestar integral: físico, mental y
+                            emocional.</p>
+
+                        <p>Me formé como educadora canina especializada en refuerzo positivo, con capacitaciones en
+                            comportamiento, lenguaje
+                            canino
+                            y bienestar animal.</p>
+
+                        <p>Sigo actualizándome constantemente para ofrecer acompañamientos personalizados que se adapten
+                            a cada perro y familia.
+                        </p>
+                        <p>
+                            <button class="btn btn-link fw-700 px-0 py-1" data-bs-toggle="modal"
+                                data-bs-target="#formacion">Conocé más sobre mi formación ›</button>
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="cta-wpp">
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col">
+                        <div class="cta-wpp--content">
+                            <h2 class="mb-4">¿Querés empezar a trabajar con tu perro?</h2>
+                            <p class="h3 mb-5">Hablemos por WhatsApp y te cuento cómo puedo ayudarte.</p>
+                            <a href="https://wa.me/5491164813869?text=Hola!%20Quiero%20consultar%20por%20las%20clases" target="_blank" class="btn btn-primary btn-lg">¡Escribime!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="servicios">
+            <div class="container-xl">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="servicios--grid">
+
+                            <div class="row justify-content-center g-3">
+                                <div class="col-12 col-sm-6 col-xl-3">
+                                    <div class="servicios--item">
+                                        <div class="servicios--item_title">
+                                            Acompañamiento personalizado
+                                        </div>
+                                        <div class="servicios--item_content">
+                                            Sesiones individuales adaptadas a las necesidades de cada perro.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-xl-3">
+                                    <div class="servicios--item">
+                                        <div class="servicios--item_title">
+                                            Educación en convivencia
+                                        </div>
+                                        <div class="servicios--item_content">
+                                            Pautas prácticas para mejorar la comunicación, la calma en casa y las salidas.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-xl-3">
+                                    <div class="servicios--item">
+                                        <div class="servicios--item_title">
+                                            Primeros pasos y hábitos
+                                        </div>
+                                        <div class="servicios--item_content">
+                                            Construcción de rutinas, enriquecimiento y bienestar integral.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-xl-3">
+                                    <div class="servicios--item">
+                                        <div class="servicios--item_title">
+                                            Juego y actividades olfativas
+                                        </div>
+                                        <div class="servicios--item_content">
+                                            Propuestas de juego, masticación y olfato para canalizar energía y favorecer la relajación.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="footer py-5">
+            <div class="container-xl">
+                <div class="row gy-4">
+                    <div class="col-sm-6">
+                        <div class="footer--text">
+                            <address><span class="icon-map-pin"></span> Zona Oeste - Buenos Aires</address>
+                            <a href="https://wa.me/5491164813869?text=Hola!%20Quiero%20consultar%20por%20las%20clases" target="_blank"><span class="icon-whatsapp"></span> (11) 6481-3869</a>
+                            <a href="https://instagram.com/morusalba.educacion" target="_blank"><span class="icon-instagram"></span>morusalba.educacion</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 text-sm-end text-center">
+                        <img src="img/logo-full-wh.svg"/>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <!-- Modal -->
         <div class="modal fade" id="formacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2 class="modal-title" id="exampleModalLabel">Mi formación</h2>
+                        <h3 class="modal-title" id="exampleModalLabel">Mi formación</h3>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <h3>Formación principal</h3>
+                        <h4 class="fw-700">Formación principal</h4>
                         <ul>
                             <li>Instructor Canino Profesional – Escuela K-9 Bomberos Voluntarios de Vuelta de Rocha</li>
-                            <li>Etología y solución de problemas comportamentales en perros – Patita Patita Adiestramiento</li>
+                            <li>Etología y solución de problemas comportamentales en perros – Patita Patita
+                                Adiestramiento</li>
                         </ul>
-                        
-                        <h3>Especializaciones y capacitaciones complementarias</h3>
+
+                        <h4 class="fw-700">Especializaciones y capacitaciones complementarias</h4>
                         <ul>
                             <li>Primeros Auxilios Básicos para Perros y Gatos (con RCP) – ACES Internacional</li>
                             <li>(Bi)Aprendizaje: Enseñar a aprender – Dog Way Club</li>
                         </ul>
-                        
-                        <h3>Webinars y actualizaciones</h3>
+
+                        <h4 class="fw-700">Webinars y actualizaciones</h4>
                         <ul>
                             <li>“No ataco, me defiendo” – La Escuela de Tupac</li>
-                            <li>“Convivencia entre perros y gatos: Pautas para una buena adaptación” – La Escuela de Tupac</li>
+                            <li>“Convivencia entre perros y gatos: Pautas para una buena adaptación” – La Escuela de
+                                Tupac</li>
                             <li>“Cerebro en acción: Neurociencia aplicada al juego” – Natur&Agility</li>
                         </ul>
-                        
+
                     </div>
                 </div>
             </div>
@@ -131,6 +255,18 @@
         crossorigin="anonymous"></script>
 
     <script src="assets/bootstrap-5.2.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener('scroll', () => {
+                const nav = document.querySelector('.navbar');
+
+                if (window.scrollY > 20) {
+                    nav.classList.add('is-sticky');
+                } else {
+                    nav.classList.remove('is-sticky');
+                }
+            });
+    </script>
 </body>
 
 </html>

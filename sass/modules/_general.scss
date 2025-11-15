@@ -1,8 +1,8 @@
-:root{
-	--tc-scroll-ofset:0; //numeros negativos suelen funcionar bien
-	
-	@include media-breakpoint-up(md){
-		--tc-scroll-ofset:0;
+:root {
+	--tc-scroll-ofset: 0; //numeros negativos suelen funcionar bien
+
+	@include media-breakpoint-up(md) {
+		--tc-scroll-ofset: 0;
 	}
 
 	--color-primary: #2a4aa1;
@@ -25,30 +25,71 @@ h1 {
 	display: none;
 }
 
-h2, .h2 {
-	font-size: 34px;
+h2,
+.h2 {
+	// font-size: 34px;
+	// line-height: 1.3em;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: 1.8px;
+	text-align: left;
+	text-transform: uppercase;
+	font-size: 46px;
+
+	&::after {
+		content: '';
+		border-bottom-width: 7px;
+		margin-top: 28px;
+		width: 140px;
+		border-bottom-style: solid;
+		display: block;
+		border-bottom-color: #2a4aa1;
+	}
+}
+
+h3,
+.h3 {
+	font-size: 24px;
 	line-height: 1.3em;
 }
 
-h3, .h3{
-	font-size:24px;
-	line-height: 1.3em;
-}
-
-p {
+h4,
+.h4 {
 	font-size: 18px;
 	line-height: 1.3em;
 }
 
-section {
-	padding: 3rem 1.5rem;
+p {
+	// font-size: 18px;
+	// line-height: 1.3em;
+	line-height: 1.3em;
+	font-size: 1.3rem;
+}
 
-	@media screen and (min-width:768px) {
-		padding: 4rem 3rem;
+.container-xl {
+	max-width: 1400px;
+	--bs-gutter-x: 30px;
+
+	@include media-breakpoint-up(sm) {
+		--bs-gutter-x: 60px;
+	}
+
+	@include media-breakpoint-up(md) {
+		--bs-gutter-x: 80px;
+	}
+}
+
+section {
+	padding: 3rem 0;
+
+	@include media-breakpoint-up(sm){
+		padding: 4rem 0;
 	}
 
 	.container-xl {
-		max-width: 1200px;
+		// max-width: 1200px;
 		margin: 0 auto;
 		height: 100%;
 	}
@@ -58,13 +99,13 @@ section {
 	display: inline-block;
 	text-decoration: none;
 	padding: 8px 24px;
-	border-radius: 2px;
+	border-radius: 4px;
 
 	&-primary {
 		background-color: var(--color-primary);
 		color: #fff;
 		text-transform: uppercase;
-		border: 2px solid var(--color-primary)!important;
+		border: 2px solid var(--color-primary) !important;
 		transition: all ease-in-out .15s;
 
 		&:hover {
@@ -73,111 +114,34 @@ section {
 		}
 	}
 
-	&-link{
-		padding-left:0;
+	&-link {
+		
 		font-size: inherit;
+		position:relative;
 		color: inherit;
+		// text-underline-offset: .25em;
+
+		&:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 0%;
+				height: 2px;
+				background: var(--color-primary);
+				transition: width .25s ease;
+			}
+		
+			&:hover {
+				color: inherit;
+				&:after {
+					width: 100%;
+				}
+			}
+
 	}
 }
 
 .img-fluid {
 	border-radius: 4px;
-}
-
-.hero {
-	position: relative;
-
-	@media screen and (min-width:1200px) {
-		height: 600px;
-	}
-
-	&:before {
-		content: '';
-		width: calc(100% - 20px);
-		height: calc(100% - 20px);
-		background-color: var(--color-secondary);
-		position: absolute;
-		top: 10px;
-		left: 10px;
-		border-radius: 4px;
-
-		@media screen and (min-width:1200px) {
-			background-image: url(../img/moras-image.svg);
-			background-position: top right -40px;
-			background-repeat: no-repeat;
-			background-size: auto 650px;
-
-		}
-	}
-
-
-
-	.container-xl {
-		// display: flex;
-		// align-items: center;
-		position: relative;
-		z-index: 1;
-	}
-
-
-	&--content {
-		display: flex;
-		flex-direction: column;
-		gap: 24px;
-		color: var(--color-primary);
-		flex-basis: auto;
-		max-width: 470px;
-		text-align: center;
-		margin: 0 auto;
-
-		@media screen and (min-width:1200px) {
-			margin: 0;
-		}
-
-		img {
-			width: 100%;
-			height: auto;
-			max-width: 440px;
-			margin: 0 auto;
-		}
-	}
-}
-
-.aboutme {
-	background-color: var(--color-primary);
-	color: #fff;
-
-	&--content {
-		// display: flex;
-		// flex-direction: column;
-		// gap: 3rem;
-		// align-items: center;
-		// justify-content: center;
-
-		// @media screen and (min-width:768px) {
-		// 	flex-direction: row;
-		// }
-
-		// >div {
-		// 	flex: 1;
-		// }
-		
-		p {
-			text-align: center;
-			margin-bottom: 1rem;
-			max-width: 450px;
-			margin: 0 auto 1rem;
-		}
-
-	}
-	
-}
-
-.formacion{
-	background-color: var(--color-nude);
-	color:var(--color-primary);
-}
-
-.modal{
-	color:var(--color-primary);
 }
