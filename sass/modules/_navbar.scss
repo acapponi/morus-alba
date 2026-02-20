@@ -1,22 +1,22 @@
 .navbar {
     min-height: 85px;
-    background-color: var(--color-secondary);
     padding-top: 0;
     padding-bottom: 0;
-    position: sticky;
+    position: fixed;
     top: 0;
+    width:100%;
     z-index: 999;
+    background-color: rgba(0,0,0,0);
     transition: box-shadow .2s ease, background .2s ease;
-
-    &.is-sticky {
-        box-shadow: -3px 0px 12px #2b2b2b4a;
-    }
-
+    
+   
     .navbar-brand {
         padding-top: 0;
         padding-bottom: 0;
 
-        img {
+
+        img,
+        svg {
             margin: 7.5px 0px;
             display: block;
             width: auto;
@@ -32,12 +32,16 @@
                 max-height: 55px;
                 max-width: 250px;
             }
+
+            path{
+                fill:#fff;
+            }
         }
     }
 
     .navbar-nav {
         .nav-link {
-            color: var(--color-black);
+            color: #fff;
             font-size: 16px;
             font-weight: 400;
             text-transform: uppercase;
@@ -58,7 +62,7 @@
                 bottom: 0;
                 width: 0%;
                 height: 2px;
-                background: var(--color-primary);
+                background: #fff;
                 transition: width .25s ease;
             }
 
@@ -68,5 +72,25 @@
                 }
             }
         }
+    }
+
+    &.is-sticky {
+        // background-color: var(--color-secondary);
+        background-color: var(--color-primary);
+        box-shadow: -3px 0px 12px #2b2b2b4a;
+
+        // .navbar-brand {
+        //     svg{
+        //         path{
+        //             // fill:var(--color-primary);
+        //         }
+        //     }
+        // }
+
+        // .navbar-nav{
+        //     .nav-link {
+        //             // color: var(--color-black);
+        //     }
+        // }
     }
 }
