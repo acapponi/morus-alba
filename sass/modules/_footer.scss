@@ -32,8 +32,11 @@
         }
 
         &_right {
-            max-width: 330px;
-            margin-left: auto;
+            
+            @include media-breakpoint-up(sm){
+                max-width: 270px;
+                margin-left: auto;
+            }
         }
     }
 }

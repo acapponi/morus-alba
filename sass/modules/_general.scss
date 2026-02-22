@@ -43,8 +43,12 @@ h2,
 	letter-spacing: 1.8px;
 	// text-align: left;
 	// text-transform: uppercase;
-	font-size: 38px;
+	font-size: 28px;
 	@extend .lora;
+
+	@include media-breakpoint-up(mdx) {
+		font-size: 38px;
+	}
 
 	&::after {
 		content: '';
@@ -56,45 +60,61 @@ h2,
 		border-bottom-color: #2a4aa1;
 	}
 
-	&.text-center{
-		&:after{
-			margin-left:  auto;
-			margin-right:  auto;
+	&.text-center {
+		&:after {
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 }
 
 h3,
 .h3 {
-	font-size: 32px;
+	font-size: 22px;
 	line-height: 1.3em;
 
-	&:after{
+	@include media-breakpoint-up(mdx) {
+		font-size: 32px;
+	}
+
+	&:after {
 		content: none;
 	}
 }
 
 h4,
 .h4 {
-	font-size: 24px;
+	font-size: 18px;
 	line-height: 1.3em;
+	
+	@include media-breakpoint-up(sm) {
+		font-size: 24px;
+	}
 }
 
-section{
-	scroll-margin-top: 85px;
+section {
+	scroll-margin-top: 70px;
+
+	@include media-breakpoint-up(md) {
+		scroll-margin-top: 85px;
+	}
 
 	p,
 	ul {
 		// font-size: 18px;
 		// line-height: 1.3em;
 		line-height: 1.3em;
-		font-size: 1.3rem;
+		font-size: 1.1rem;
+
+		@include media-breakpoint-up(sm) {
+			font-size: 1.3rem;
+		}
 	}
-	
+
 }
 
 
-u{
+u {
 	text-underline-offset: 2px;
 }
 
@@ -114,7 +134,7 @@ u{
 section {
 	padding: 3rem 0;
 
-	@include media-breakpoint-up(sm){
+	@include media-breakpoint-up(sm) {
 		padding: 4rem 0;
 	}
 
@@ -148,53 +168,54 @@ section {
 		&:focus {
 			background-color: #223c84;
 			border-color: #223c84;
-			color:#fff;
+			color: #fff;
 			// color: var(--color-primary);
 		}
 	}
 
-		&-white {
-			background-color:rgba(0,0,0,0);
-			color: #fff;
-			// text-transform: uppercase;
-			border: 2px solid #fff;
-			transition: all ease-in-out .15s;
-	
-			&:hover,
-			&:active:focus,
-			&:active,
-			&:focus {
-				background-color: #fff;
-				// border-color: #223c84;
-				// color: #fff;
-				color: var(--color-primary);
-			}
+	&-white {
+		background-color: rgba(0, 0, 0, 0);
+		color: #fff;
+		// text-transform: uppercase;
+		border: 2px solid #fff;
+		transition: all ease-in-out .15s;
+
+		&:hover,
+		&:active:focus,
+		&:active,
+		&:focus {
+			background-color: #fff;
+			// border-color: #223c84;
+			// color: #fff;
+			color: var(--color-primary);
 		}
+	}
 
 	&-link {
-		
+
 		font-size: inherit;
-		position:relative;
+		position: relative;
 		color: inherit;
 		// text-underline-offset: .25em;
 
 		&:after {
-				content: "";
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				width: 0%;
-				height: 2px;
-				background: var(--color-primary);
-				transition: width .25s ease;
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 0%;
+			height: 2px;
+			background: var(--color-primary);
+			transition: width .25s ease;
+		}
+
+		&:hover {
+			color: inherit;
+
+			&:after {
+				width: 100%;
 			}
-		
-			&:hover {
-				color: inherit;
-				&:after {
-					width: 100%;
-				}
-			}
+		}
 
 	}
 }
